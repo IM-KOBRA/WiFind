@@ -1,6 +1,6 @@
 # WiFind 📡
 
-**Wi-Fi Profile Reporter** is a secure Windows tool to view saved Wi-Fi profiles, encryption types, and connection info. Optionally reveal passwords with `--reveal` and send full reports to Telegram. Simple, Unicode/Persian-friendly, perfect for network pros and security enthusiasts.
+**Wi-Fi Profile Reporter** ابزاری امن برای ویندوز است که به شما امکان مشاهده پروفایل‌های ذخیره‌شده وای‌فای، نوع رمزنگاری و اطلاعات اتصال را می‌دهد. با استفاده از آپشن `--reveal` می‌توانید رمزهای عبور را نیز نمایش دهید و گزارش کامل را به تلگرام ارسال کنید. این ابزار ساده، با پشتیبانی کامل از یونیکد و زبان فارسی، برای متخصصان شبکه و علاقه‌مندان به امنیت ایده‌آل است.
 
 ---
 
@@ -12,100 +12,77 @@
 
 ---
 
-## 🚀 Features
+## 🚀 ویژگی‌ها
 
-- View all saved Wi-Fi profiles on Windows  
-- Display encryption type, connection mode, and network type  
-- Optional password reveal with `--reveal`  
-- Gather active network interface info and signal strength  
-- Send full **HTML reports** to Telegram with `--send-telegram`  
-- Full **Unicode & Persian support**  
-- Ideal for network professionals, security enthusiasts, and automation  
+- مشاهده تمام پروفایل‌های وای‌فای ذخیره‌شده در ویندوز
+- نمایش نوع رمزنگاری، حالت اتصال و نوع شبکه
+- قابلیت نمایش رمزهای عبور با آپشن `--reveal`
+- جمع‌آوری اطلاعات کارت شبکه فعال و قدرت سیگنال
+- ارسال **گزارش HTML** کامل به تلگرام با آپشن `--send-telegram`
+- پشتیبانی کامل از **یونیکد و زبان فارسی**
+- ایده‌آل برای متخصصان شبکه، علاقه‌مندان به امنیت و اتوماسیون
 
 ---
 
-## ⚡ Requirements
+## ⚡ نیازمندی‌ها
 
-- **OS:** Windows  
-- **Python:** 3.8+  
-- **Library:** `requests` (for Telegram)
+- **سیستم‌عامل:** ویندوز
+- **پایتون:** +3.8
+- **کتابخانه:** `requests` (برای ارسال به تلگرام)
 
 ```bash
 pip install -r requirements.txt
-
-🛠️ Installation
-bashgit clone https://github.com/IM-KOBRA/WiFind.git
+🛠️ نصب و راه‌اندازی
+code
+Bash
+# Clone the repository
+git clone https://github.com/IM-KOBRA/WiFind.git
 cd WiFind
+
+# Install dependencies
 pip install -r requirements.txt
-Optional: Set up Telegram (for --send-telegram)
-powershell# PowerShell
+اختیاری: تنظیمات تلگرام (برای استفاده از --send-telegram)
+در PowerShell دستورات زیر را برای تنظیم توکن ربات و شناسه چت خود وارد کنید:
+code
+Powershell
+# PowerShell
 setx WIFI_BOT_TOKEN "YOUR_BOT_TOKEN"
 setx WIFI_CHAT_ID "YOUR_CHAT_ID"
-
-Or add them directly in code or .env file.
-
-
-💻 Usage
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-CommandDescriptionpython wifi_reporter.pyView local reportpython wifi_reporter.py --revealShow passwordspython wifi_reporter.py --send-telegramSend report to Telegrampython wifi_reporter.py --reveal --send-telegramShow + send with passwords
-
-🎨 Sample Output
-textSSID               : HomeWiFi
+می‌توانید این مقادیر را مستقیماً در کد یا در یک فایل .env نیز قرار دهید.
+💻 نحوه استفاده
+دستور	توضیحات
+python wifi_reporter.py	نمایش گزارش در محیط ترمینال
+python wifi_reporter.py --reveal	نمایش گزارش به همراه رمزهای عبور
+python wifi_reporter.py --send-telegram	ارسال گزارش به تلگرام
+python wifi_reporter.py --reveal --send-telegram	نمایش و ارسال گزارش به همراه رمزهای عبور
+🎨 نمونه خروجی
+code
+Text
+SSID               : HomeWiFi
 Authentication     : WPA2-Personal
 Encryption         : CCMP
 Connection Mode    : auto
 Network Type       : Infrastructure
 Signal             : 87%
-Password           : MySecretPass123   (only with --reveal)
-
-Telegram reports are sent in rich HTML format.
-
-
-🛡️ Security & Privacy
-
-Passwords are only shown with --reveal
-Runs 100% locally — no data sent without your command
-Telegram sending is optional and fully configurable
-
-
-📄 License
-textMIT License © 2025 IM-KOBRA
-
-🏷️ Tags
-Wi-Fi Network Security Windows Python Telegram Bot Automation Persian Unicode WiFi Password Netsh Cybersecurity
-
-🤝 Contributing
-Found a bug? Have an idea? Submit a Pull Request!
-See CONTRIBUTING.md for guidelines.
-
-⭐ Star This Project!
-If you find WiFind useful, give it a star ⭐ to help others discover it!
-
-
-  Made with ❤️ by IM-KOBRA
-
+Password           : MySecretPass123   (فقط با --reveal)
+گزارش‌های تلگرام در قالب HTML و با ظاهری غنی ارسال می‌شوند.
+🛡️ امنیت و حریم خصوصی
+رمزهای عبور تنها با استفاده از آپشن --reveal نمایش داده می‌شوند.
+برنامه ۱۰۰٪ به صورت محلی اجرا می‌شود و هیچ داده‌ای بدون دستور شما ارسال نمی‌گردد.
+قابلیت ارسال به تلگرام کاملاً اختیاری و قابل تنظیم است.
+📄 لایسنس
+این پروژه تحت لایسنس MIT منتشر شده است.
+MIT License © 2025 IM-KOBRA
+🏷️ تگ‌ها
+<p align="center">
+Wi-Fi, Network, Security, Windows, Python, Telegram Bot, Automation, Persian, Unicode, WiFi Password, Netsh, Cybersecurity
+</p>
+🤝 مشارکت در پروژه
+آیا باگی پیدا کرده‌اید یا ایده‌ای برای بهبود پروژه دارید؟ لطفاً یک Pull Request ارسال کنید!
+برای اطلاعات بیشتر، فایل CONTRIBUTING.md را مطالعه کنید.
+⭐ به این پروژه ستاره دهید!
+اگر WiFind برای شما مفید بود، با ستاره دادن ⭐ به آن به دیگران در پیدا کردنش کمک کنید!
+<p align="center">
+ساخته شده با ❤️ توسط IM-KOBRA
+</p>
 ```
